@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lovely meong</title>
+    <link href="css/style2.css" rel="stylesheet" type="text/css">
+    
+    <!--카피해서 가져옴-->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    
+    <!--카피해서 가져옴-->
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bxslider.js"></script>
+    
+    <script type="text/javascript">
+        
+        $(function(){
+        $('.bxslider').bxSlider({
+            captions:true,
+            //slideWidth:600,  //수정
+            auto:true,
+            autoControls:true,
+            stopAutoOnclick:true,
+
+          });
+        });
+//<![CDATA[
+$(function(){
+  var mySlider=$("#slide_banner").bxSlider({
+      mode:"horizontal",   // 가로 수평으로 슬라이드 됩니다.
+      speed:300,              // 이동 속도를 설정합니다.
+      pager:false,            // 현재 위치 페이징 표시 여부 설정.
+      moveSlides:1,         // 슬라이드 이동시 갯수 설정.
+      slideWidth:1500,        // 슬라이드 마다 너비 설정.
+      minSlides:3,           // 최소 노출 개수를 설정합니다.
+      maxSlides:3,          // 최대 노출 개수를 설정합니다.
+      slideMargin:10,      // 슬라이드간의 간격을 설정합니다.
+      auto:true,             // 자동으로 흐를지 설정합니다.
+      autoHover:true,    // 마우스 오버시 정시킬지 설정합니다.
+      controls:false        // 이전 다음 버튼 노출 여부 설정합니다.
+   });
+//이전 버튼을 클릭하면 이전 슬라이드로 전환됩니다.
+   $("#prevBtn").on("click",function(){
+    mySlider.goToPrevSlide();  //이전 슬라이드 배너로 이동됩니다.
+    return false; //<a>에 링크를 차단합니다.
+   });
+//다음 버튼을 클릭하면 다음 슬라이드로 전환됩니다.
+   $("#nextBtn").on("click",function(){
+    mySlider.goToNextSlide();  //다음 슬라이드 배너로 이동됩니다.
+    return false;
+   });
+    
+    /*----------------------상단 메뉴 네비게이션---------------------------*/
+    $(".menu>li").each(function(){
+            var sub = $(this).find(".submenu");
+            
+            $(this).hover(function(){
+                sub.stop().slideDown();
+            },
+                          function(){
+                sub.stop().slideUp();
+            })//hover
+        })//nav li each
+    
+    $(".side>li").each(function(){
+            var sub = $(this).find(".submenu");
+            
+            $(this).hover(function(){
+                sub.stop().slideDown();
+            },
+                          function(){
+                sub.stop().slideUp();
+            })//hover
+        })//nav li each
+});
+//]]>
+</script>
+    <!--가져옴 끝-->
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="top_header">
+                <div class="inner">
+                    <ul class="util">
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">고객센터</a></li>
+                        <!--space-->
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bottom_header">
+                <div class="inner">
+                    <ul class="menu">
+                        <li><a href="#">소개</a>
+                        <ul class="submenu">
+                            <li><a href="sub1.html">가게소개</a></li>
+                            <li><a href="#">캐릭터소개</a></li>
+                            <li><a href="#">이용안내</a></li>
+                            <li><a href="sub2.html">오시는길</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">내부시설</a>
+                        <ul class="submenu">
+                            <li><a href="#">미용</a></li>
+                            <li><a href="#">목욕&스파</a></li>
+                            <li><a href="#">호텔</a></li>
+                            <li><a href="#">놀이터</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">스타일</a></li>
+                        <li><a href="sub3.html">리뷰</a></li>
+                        <!--space-->
+                    </ul>
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.jpg" alt="로고"></a>
+                    </div>
+                    <ul class="side">
+                        <li><a href="sub4.html"><i><img src="img/gold.jpg" alt=" 요금"></i>요금안내</a>
+                        <ul class="submenu">
+                            <li><a href="sub4.html">미용</a></li>
+                            <li><a href="#">호텔</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="sub5.html"><i><img src="img/list.jpg" alt="예약"></i>예약문의</a></li>                   <!--space-->   
+                    </ul>
+                    <div class="serch">
+                        <a href="#"><img src="img/serch.jpg" alt="검색"></a>
+                    </div>
+                    <div class="m_menu">
+                        <a href="#"><img src="img/list_3.jpg" alt="메튜버튼"></a>
+                    </div>
+                    <!--space-->
+                </div>
+            </div>
+        </div>
+        <!--헤더 끝-->
+        <div class="bxslider">
+        
+        
+        <div id="mainimg">
+         <div class="inner">
+          <!--메인 부모역할/아래 자식역할-->
+           <div class="main_text">
+               <div class="main_text_pd">
+                <h1><span>애완견</span>을 위한<br><span>미용 호텔 목욕 스파</span></h1>
+                <p>직접 만든 천연제품을 사용하여<br>아이들의 피부를 지켜줍니다</p>
+            <a href="sub1.html"
+                ><div class="btn">자세히보기</div></a>
+           </div>
+           </div>
+           <div class="main_img">
+               <img src="img/main_03.png" alt="메인이미지강아지">
+           </div>
+         </div>
+        </div>
+        
+        <div id="mainimg">
+         <div class="inner">
+          <!--메인 부모역할/아래 자식역할-->
+           <div class="main_text">
+               <div class="main_text_pd">
+                <h1><span>애완견</span>을 위한<br><span>다양한 애견 미용!</span></h1>
+                <p>슬라이드2<br>연습중입니다</p>
+            <a href="sub1.html"
+                ><div class="btn">자세히보기</div></a>
+           </div>
+           </div>
+           <div class="main_img">
+               <img src="img/main_03.png" alt="메인이미지강아지">
+           </div>
+         </div>
+        </div> 
+        
+            <div id="mainimg">
+         <div class="inner">
+          <!--메인 부모역할/아래 자식역할-->
+           <div class="main_text">
+               <div class="main_text_pd">
+                <h1><span>애완견</span>을 위한<br><span>다양한 애견 미용!</span></h1>
+                <p>슬라이드3<br>연습중입니다</p>
+            <a href="sub1.html"
+                ><div class="btn">자세히보기</div></a>
+           </div>
+           </div>
+           <div class="main_img">
+               <img src="img/main_03.png" alt="메인이미지강아지">
+           </div>
+         </div>
+        </div>
+             
+                       
+      </div>
+        
+        
+        
+        
+        <!--메인 끝-->
+        <div id="contents">
+           <!--추천상품-->
+            <div class="best_set">
+                <div class="best_title">
+                   <!-- :before으로 position:absolute밑줄 
+                   (이해못햇음)-->
+                    <h2>추천상품</h2>
+                </div>
+                <div class="best_slider">
+                    <div class="btn_prev">
+                        <img src="img/left_1.jpg" alt="이전">
+                    </div>
+                    <div class="bext_list">
+                        <div class="slide">
+                           <div></div>
+                        </div>
+                        <div class="slide">
+                           <div></div>
+                        </div>
+                        <div class="slide">
+                           <div></div>
+                        </div>
+                            <!--space-->
+                    </div>
+                    <div class="btn_next">
+                        <img src="img/right_1.jpg" alt="다음">
+                    </div>
+                </div>
+                <div class="best_data">
+                    <div class="data_box">
+                       <!--예제랑 다르게 생겨서 변형-->
+                        <dl>
+                            <i><img src="img/con1.png" alt="말풍선"></i>
+                            <dt>스타일 상담</dt>
+                        </dl>
+                        <dl>
+                            <i><img src="img/con2.png" alt="미용"></i>
+                            <dt>미용</dt>
+                        </dl>
+                        <dl>
+                            <i><img src="img/con3.png" alt="포토존"></i>
+                            <dt>포토존</dt>
+                        </dl>
+                        <!--space-->
+                    </div>
+                    <div class="data_btn">상담받기</div>
+                    <!--sapce-->
+                </div>
+            </div>
+            <!--손 쉽고 간편한 예약-->
+            <div class="banner_set">
+                <div class="inner">
+                    <div>
+                        <h3>손 쉽고 간편한 예약</h3>
+                        <p>전화하지 않아도 ok<br>방문하지 않아도 ok</p>
+                    </div>
+                    <div><!--가운데 - 선 용도--></div>
+                    <ul>
+                        <li><a href="sub5.html">
+                        <i><img src="img/con4.png" alt="미용"></i>
+                            <p>미용</p></a>
+                        </li>
+                        <li><a href="sub5.html">
+                        <i><img src="img/con5.png" alt="호텔"></i>
+                            <p>호텔</p></a>
+                        </li>
+                        <li><a href="sub5.html">
+                        <i><img src="img/con6.png" alt="목욕"></i>
+                            <p>목욕</p></a>
+                        </li>
+                        <li><a href="sub5.html">
+                        <i><img src="img/con7.png" alt="스파"></i>
+                            <p>스파</p></a>
+                        </li>
+                        <!--space-->
+                    </ul>
+                    <!--space-->
+                </div>
+            </div>
+            <!--SNS 후기-->
+            <div class="sns_set"><!--쌤 예제서는 void_set임-->
+                <h2>SNS 후기</h2>
+                <div class="inner">
+                <div id="banner_wrap">
+      <ul id="slide_banner">
+         <li><a href="#"><img src="img/img1.png" alt="후기1" />
+         <p>#말티즈_얼굴컷</p></a></li>
+         <li><a href="#"><img src="img/img2.jpg" alt="후기2" />
+         <p>#푸들_테디베어</p></a></li>
+         <li><a href="#"><img src="img/img3.jpg" alt="후기3" />
+         <p>#폼피츠_가위컷</p></a></li>
+         <li><a href="#"><img src="img/img1.png" alt="후기1" />
+         <p>#말티즈_얼굴컷</p></a></li>
+         <li><a href="#"><img src="img/img2.jpg" alt="후기2" />
+         <p>#푸들_테디베어</p></a></li>
+         <li><a href="#"><img src="img/img3.jpg" alt="후기3" />
+         <p>#폼피츠_가위컷</p></a></li>
+      </ul>
+      <p><a href="#" id="prevBtn"><img src="img/left_2.jpg" alt="이전버튼" /></a></p>
+      <p><a href="#" id="nextBtn"><img src="img/right_2.jpg" alt="다음버튼" /></a></p>
+   </div>
+                <!--원래 잇던거
+                <div class="sns_slider">
+                    <div class="btn_prev">
+                        <img src="img/left_2.jpg" alt="이전">
+                    </div>
+                    <div class="inner">
+                    <div class="sns_list">
+                        <div class="slider">
+                            <img src="img/img1.png" alt="후기1">
+                            <p>#말티즈_얼굴컷</p>
+                        </div>
+                        <div class="slider">
+                            <img src="img/img2.jpg" alt="후기2">
+                            <p>#푸들_테디베어</p>
+                        </div>
+                        <div class="slider">
+                            <img src="img/img3.jpg" alt="후기3">
+                            <p>#폼피츠_가위컷</p>
+                        </div>
+                        <x--space--
+                    </div>
+                    </div>
+                    <div class="btn_next">
+                        <img src="img/right_2.jpg" alt="다음">
+                    </div>
+                    <x--space--
+                </div> -->
+                </div> 
+            </div>
+            <!--애견용품-->
+            <div class="dog_set"><!--쌤 예제서는 homeLiving_set임-->
+                <h2>애견용품</h2>
+                <p>애완견에게 필요한 물건을 선물해보세요.</p>
+                <ul>
+                    <li><a href="#">
+                        <i><img src="img/con8.png" alt="간식"></i>
+                        <p>간식</p></a>
+                    </li>
+                    <li><a href="#">
+                        <i><img src="img/con9.png" alt="장난감"></i>
+                        <p>장난감</p></a>
+                    </li>
+                    <li><a href="#">
+                        <i><img src="img/con10.png" alt="의류"></i>
+                        <p>의류</p></a>
+                    </li>
+                    <li><a href="#">
+                        <i><img src="img/con11.png" alt="천연제품"></i>
+                        <p>천연제품</p></a>
+                    </li>
+                    <!--space-->
+                </ul>
+            </div>
+            <!--가게간략소개-->
+            <div class="add_set">
+                <h2>러블리멍</h2>
+                <p>미용, 호텔, 올레길놀이터, 진공잔디테라스<br>
+                경남 양산시 삼호동 대운 9길 9-18<br>
+                예약/문의 010.402.1080<br>
+                매주 월요일 휴무</p>
+            </div>
+            <!--공지-->
+            <div class="board_set">
+               <div class="inner">
+                   <h4><a href="#">공지사항</a></h4>
+                   <p><a href="#">MORE</a></p>
+                <!--space-->
+            </div>
+            </div>
+        </div>
+        <!--컨텐츠 끝-->
+        <div id="footer">
+            <div class="top_footer">
+                <div class="inner">
+                    <ul class="f_info">
+                        <li><a href="sub1.html">회사소개</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">고객센터</a></li>
+                        <!--space-->
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom_footer">
+                <div class="inner">
+                    <div class="f_logo">
+                        <img src="img/logo_f.png" alt="f_로고">
+                    </div>
+                    <div class="copy_left">
+                        <ul>
+                            <li>
+                                <span>주소</span>경남 양산시 대운9길 9-18
+                            </li>
+                            <li>
+                                <span>대표자</span>최은영
+                            </li>
+                        </ul>
+                        <p>Copyright@러블리멍,All rights reserved</p>
+                    </div>
+                    <div class="copy_right">
+                        <ul>
+                            <li>
+                                <span>카카오톡 ID</span>Lovelymeong
+                            </li>
+                            <li>
+                                <span>연락처</span>010-4022-1080
+                            </li>
+                        </ul>
+                    </div>
+                    <!--space-->
+                </div>
+            </div>
+        </div>
+        <!--푸터 끝-->            
+    </div>
+</body>
+</html>
